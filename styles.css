@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #080007;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(8, 0, 7, 0.7);
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Text Styling */
+.navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+}
+
+/* Hover, Focus, and Active states */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+    color: #eb02e0;
+    background-color: rgba(235, 2, 224, 0.1);
+    border-radius: 5px;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.navbar-brand:hover {
+    color: #eb02e0;
+}
+
+/* Custom Toggler Button Styling */
+.navbar-toggler {
+    border: none;
+    background-color: #080007;
+    padding: 8px 12px;
+}
+
+.navbar-toggler .fas {
+    color: #eb02e0;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(235, 2, 224, 0.2);
+    border-radius: 5px;
+}
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 0, 7, 0.5);
+    z-index: -1;
+}
+/* Hero Carousel Styling */
+.carousel-inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.carousel-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 3s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Customize carousel transition */
+.carousel-item {
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+/* Hero Section Typography */
+#hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+    color: #fff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 2s ease-in-out;
+}
+#hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #f1f1f1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Button Styling (applied to all buttons) */
+#hero .btn, .portfolio-btn, form button {
+    background-color: #eb02e0; /* Bright pink background */
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 12px 35px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(235, 2, 224, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#hero .btn:hover, .portfolio-btn:hover, form button:hover {
+    background-color: #c100bc;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(235, 2, 224, 0.4);
+}
+
+#hero .btn:active, .portfolio-btn:active, form button:active {
+    background-color: #a00098;
+    transform: scale(0.98);
+}
+
+/* Overlay Content */
+.content-overlay {
+    position: relative;
+    z-index: 1;
+}
+.portfolio-btn {
+    margin-top: 50px;
+}
+
+/* Keyframes for text animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Overlay Content */
+.content-overlay {
+    position: relative;
+    z-index: 1;
+}
+
+/* Dehub Logo Styling */
+.dehub-logo {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    animation: pulse 3s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Services Section */
+#services {
+    background-color: #080007; /* Dark background */
+    padding: 100px 20px;
+}
+
+#services h2 {
+    color: #eb02e0; /* Pink title */
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Service Cards */
+.service-card {
+    position: relative;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures video stays within the card bounds */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent; /* Set background to transparent to show video */
+}
+
+/* Video Background */
+.video-bg-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Ensure video is properly behind content */
+    opacity: 0.6; /* Adjust opacity to make it more visible */
+    pointer-events: none; /* Ensure video doesn't interfere with hover effects */
+}
+
+/* Card Content */
+.card-content {
+    position: relative; /* Keeps the content above the video */
+    z-index: 1; /* Ensures content is above video */
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: Add a subtle transparent overlay to improve readability */
+    padding: 15px;
+}
+
+/* Service Card Image Styling */
+.service-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2; /* Keep image above video background */
+}
+
+/* Service Card Title */
+.service-card .card-title {
+    color: #eb02e0; /* Pink title */
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Service Card Text */
+.service-card .card-text {
+    color: #f1f1f1; /* Light grey text */
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: scale(1.05); /* Scale on hover */
+    box-shadow: 0 8px 16px rgba(235, 2, 224, 0.4); /* Pink shadow */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Us Section Styling */
+.about-us {
+    background-color: #080007; /* Keep the dark background consistent */
+    padding-bottom: 50px; /* Add some padding around the section */
+    text-align: center;
+}
+
+.about-us h2 {
+    color: #eb02e0; /* Pink heading for consistency */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.about-us p {
+    color: #f1f1f1; /* Light text for readability */
+    font-size: 1.2rem;
+    line-height: 1.8; /* Comfortable line height for readability */
+}
+
+/* Contact Section Background Video */
+
+
+#contact {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #eb02e0;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Contact Form Styling */
+form input, form textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #eb02e0;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-color: #c100bc;
+    box-shadow: 0 0 10px rgba(235, 2, 224, 0.5);
+}
+
+form button {
+    background-color: #eb02e0;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 12px 35px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(235, 2, 224, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: #c100bc;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(235, 2, 224, 0.4);
+}
+
+form button:active {
+    background-color: #a00098;
+    transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000000;
+    color: #f1f1f1;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #eb02e0; /* Keeping brand color */
+}
+
+.footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #eb02e0; /* Hover to brand pink */
+}
+
+.footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul.list-inline {
+    padding: 0;
+}
+
+.footer ul.list-inline-item {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.footer ul.list-inline-item a {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+.footer ul.list-inline-item a i {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.footer p, .footer h5, .footer ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.footer .row.mt-4 p {
+    font-size: 0.9rem;
+    color: #d3d3d3;
+}
+
+/* Larger Screens (Desktop) */
+@media (min-width: 1200px) {
+    .carousel-inner {
+        max-width: 900px; /* Increase max-width for larger screens */
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 500px; /* Adjust height for larger screens */
+    }
+}
+/* Responsive Text and Button for Smaller Screens */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    #hero .btn, .portfolio-btn, form button {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+    }
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
+    }
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    .footer h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer ul {
+        font-size: 1rem;
+    }
+
+    .footer ul.list-inline-item {
+        display: block;
+        margin-bottom: 0.8rem;
+    }
+
+    .footer .row.mt-4 p {
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 400px) {
+.navbar-brand {
+    font-size: 1.3rem;
+}
+.nav-link{
+    font-size: 1.1rem;
+}
+#hero h1 {
+    font-size: 2rem; /* Decrease font size for h1 */
+    margin-top: 20px;
+}
+
+/* Smaller font size for hero section paragraph */
+#hero p {
+    font-size: 1rem; /* Decrease font size for paragraph */
+}
+
+/* Smaller font size for buttons */
+#hero .btn, .portfolio-btn, form button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 8px 20px; /* Adjust button padding */
+}
+}
